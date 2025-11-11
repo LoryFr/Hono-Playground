@@ -4,6 +4,8 @@ import { css, Style } from "hono/css";
 
 interface Props {
   title?: string;
+  description?: string;
+  image?: string;
 }
 
 const globalClass = css`
@@ -69,7 +71,15 @@ const Layout: FC = (props: PropsWithChildren<Props>) => {
   return (
     <html>
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{props.title}</title>
+        <meta name="description" content={props.description} />
+        <meta property="og:title" content={props.title} />
+        <meta property="og:description" content={props.description} />
+        <meta property="og:url" content="https://lorenzofiori.art" />
+        <meta property="og:site_name" content="Lorenzo Fiori" />
+        <meta property="og:image" content={props.image} />
+        <meta property="og:type" content="website" />
         <link rel="preconnect" href="https://rsms.me/" />
         <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         <Style />

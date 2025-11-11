@@ -1,0 +1,57 @@
+import type { FC } from "hono/jsx";
+import { css } from "hono/css";
+
+interface Props {
+  date: string;
+}
+
+const statusClass = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    text-decoration: none;
+
+    & p {
+      color: var(--color-text-primary);
+    }
+  }
+
+  & p {
+    color: var(--color-text-secondary);
+    font-size: 0.875rem;
+    line-height: 150%;
+    font-weight: 600;
+  }
+`;
+
+const Status: FC = ({ date }: Props) => {
+  return (
+    <header className={statusClass}>
+      <a href={"/"}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+          width={"1.25rem"}
+          height={"1.25rem"}
+        >
+          <path
+            fillRule="evenodd"
+            d="M18 10a.75.75 0 0 1-.75.75H4.66l2.1 1.95a.75.75 0 1 1-1.02 1.1l-3.5-3.25a.75.75 0 0 1 0-1.1l3.5-3.25a.75.75 0 1 1 1.02 1.1l-2.1 1.95h12.59A.75.75 0 0 1 18 10Z"
+            clipRule="evenodd"
+          />
+        </svg>
+
+        <p>Go Back</p>
+      </a>
+      <p>{date}</p>
+    </header>
+  );
+};
+
+export default Status;

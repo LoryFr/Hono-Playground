@@ -42,7 +42,7 @@ const Colors: FC = async () => {
           <Card
             image={project.image.url}
             title={project.title}
-            href={`/posts/projects/${project.slug}`}
+            href={`/posts/colors/${project.slug}`}
           />
         ))}
       </div>
