@@ -78,6 +78,7 @@ const Layout: FC = (props: PropsWithChildren<Props>) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>{props.title}</title>
         <meta name="description" content={props.description} />
+        <meta name="icon" content="/public/favicon.ico" />
         <meta property="og:title" content={props.title} />
         <meta property="og:description" content={props.description} />
         <meta property="og:url" content="https://lorenzofiori.art" />
