@@ -12,7 +12,7 @@ const avatarClass = css`
 const Avatar: FC = () => {
   return (
     <img
-      src="/public/avatar.jpg"
+      src="/static/avatar.jpg"
       alt="avatar of lorenzo fiori"
       className={avatarClass}
     ></img>
