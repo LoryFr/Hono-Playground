@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "dev": "bun run --hot src/index.tsx"
+    "dev": "bun run --hot src/index.ts"
   },
   "dependencies": {
-    "hono": "^4.10.4"
+    "@payloadcms/sdk": "^3.63.0",
+    "hono": "^4.10.5"
   }
 }
