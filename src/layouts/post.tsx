@@ -90,9 +90,15 @@ const postClass = css`
 
 const Post: FC = (props: PropsWithChildren<Props>) => {
   return (
-    <Layout title={props.title}>
-      <article class={postClass}>{props.children}</article>
-      <Footer></Footer>
+    <Layout
+      title={props.title}
+      description={props.description}
+      image={props.image}
+    >
+      <article class={postClass}>
+        {props.children}
+        <Footer></Footer>
+      </article>
     </Layout>
   );
 };

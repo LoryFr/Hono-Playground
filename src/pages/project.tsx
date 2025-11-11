@@ -18,10 +18,9 @@ const Page = async (c: Context) => {
   const project = await getProject(slug);
   return c.render(
     <Layout
-      title={"Lorenzo Fiori - Digital Product Designer"}
-      description={
-        "I'm a designer & frontend engineer. I craft user-centered digital products that are clean, intuitive, and engaging. With a strong focus on detail and performance, I turn ideas into seamless, scalable interfaces."
-      }
+      title={project.docs[0].title}
+      description={project.docs[0].description}
+      image={project.docs[0].image.url}
     >
       <Status date={formatDate(project.docs[0].date)}></Status>
       <img src={project.docs[0].image.url}></img>

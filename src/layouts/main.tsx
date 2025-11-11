@@ -64,6 +64,10 @@ const globalClass = css`
       flex-direction: column;
       gap: 4rem;
     }
+
+    @view-transition {
+      navigation: auto;
+    }
   }
 `;
 

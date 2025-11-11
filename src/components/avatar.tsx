@@ -1,5 +1,5 @@
 import type { FC } from "hono/jsx";
-import { css, Style } from "hono/css";
+import { css } from "hono/css";
 
 const avatarClass = css`
   width: 3rem;
@@ -12,12 +12,9 @@ const avatarClass = css`
 const Avatar: FC = () => {
   return (
     <img
-      src="https://lorenzofiori.art/avatar.jpg"
-      alt=""
-      width={128}
-      height={128}
+      src="/public/avatar.jpg"
+      alt="avatar of lorenzo fiori"
       className={avatarClass}
-      loading="eager"
     ></img>
   );
 };
