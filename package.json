@@ -5,5 +5,8 @@
   "dependencies": {
     "@payloadcms/sdk": "^3.63.0",
     "hono": "^4.10.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }

@@ -1,14 +1,15 @@
 import Layout from "../layouts/main";
 import type { Context } from "hono";
-import { getProjects } from "../libraries/payload";
+import Header from "../components/header";
+import Projects from "../components/projects";
+import Colors from "../components/colors";
 
-const Page = async (c: Context) => {
-  const projects = await getProjects();
+const Page = (c: Context) => {
   return c.render(
     <Layout title={"Lorenzo Fiori"}>
-      {projects.docs.map((project: any, index: number) => (
-        <h1 key={index}>{project.slug}</h1>
-      ))}
+      <Header></Header>
+      <Projects></Projects>
+      <Colors></Colors>
     </Layout>,
   );
 };
