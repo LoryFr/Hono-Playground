@@ -11,7 +11,7 @@ const Page = (c: Context) => {
       description={
         "I'm a designer & frontend engineer. I craft user-centered digital products that are clean, intuitive, and engaging. With a strong focus on detail and performance, I turn ideas into seamless, scalable interfaces."
       }
-      image="/static/opengraph-image.jpg"
+      image="/opengraph-image.jpg"
     >
       <Header></Header>
       <Projects></Projects>

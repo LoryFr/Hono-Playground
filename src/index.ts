@@ -8,6 +8,6 @@ const app = new Hono();
 app.get("/", Home);
 app.get("/posts/projects/:slug", Project);
 app.get("/posts/colors/:slug", Color);
-app.use("/static/*", serveStatic({ root: "./" }));
+app.use("/*", serveStatic({ root: "./public" }));
 
 export default app;
