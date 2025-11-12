@@ -30,9 +30,9 @@ const Page = async (c: Context) => {
         year={project.docs[0].details.year}
         tools={project.docs[0].details.tools}
       />
-      <div
+      <main
         dangerouslySetInnerHTML={{ __html: project.docs[0].content_html }}
-      ></div>
+      ></main>
     </Layout>,
   );
 };

@@ -35,7 +35,7 @@ const collectionClass = css`
 const Projects: FC = async () => {
   const projects = await getProjects();
   return (
-    <section className={collectionClass}>
+    <main className={collectionClass}>
       <h2>Projects</h2>
       <div class={"grid"}>
         {projects.docs.map((project: any) => (
@@ -46,7 +46,7 @@ const Projects: FC = async () => {
           />
         ))}
       </div>
-    </section>
+    </main>
   );
 };
 
