@@ -1,6 +1,7 @@
 import type { FC } from "hono/jsx";
 import { PropsWithChildren } from "hono/jsx";
 import { css, Style } from "hono/css";
+import { html, raw } from "hono/html";
 
 interface Props {
   title?: string;
@@ -73,24 +74,27 @@ const globalClass = css`
 
 const Layout: FC = (props: PropsWithChildren<Props>) => {
   return (
-    <html lang="en">
-      <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>{props.title}</title>
-        <meta name="description" content={props.description} />
-        <meta name="icon" content="/favicon.ico" />
-        <meta property="og:title" content={props.title} />
-        <meta property="og:description" content={props.description} />
-        <meta property="og:url" content="https://lorenzofiori.art" />
-        <meta property="og:site_name" content="Lorenzo Fiori" />
-        <meta property="og:image" content={props.image} />
-        <meta property="og:type" content="website" />
-        <link rel="preconnect" href="https://rsms.me/" />
-        <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-        <Style />
-      </head>
-      <body class={globalClass}>{props.children}</body>
-    </html>
+    <>
+      {html`<!DOCTYPE html>`}
+      <html lang="en">
+        <head>
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <title>{props.title}</title>
+          <meta name="description" content={props.description} />
+          <meta name="icon" content="/favicon.ico" />
+          <meta property="og:title" content={props.title} />
+          <meta property="og:description" content={props.description} />
+          <meta property="og:url" content="https://lorenzofiori.art" />
+          <meta property="og:site_name" content="Lorenzo Fiori" />
+          <meta property="og:image" content={props.image} />
+          <meta property="og:type" content="website" />
+          <link rel="preconnect" href="https://rsms.me/" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+          <Style />
+        </head>
+        <body class={globalClass}>{props.children}</body>
+      </html>
+    </>
   );
 };
 

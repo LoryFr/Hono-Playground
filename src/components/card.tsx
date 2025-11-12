@@ -84,7 +84,7 @@ const Card: FC = ({ image, href = "/", title }: Props) => {
   return (
     <a href={href} class={cardClass} aria-label={title}>
       {image ? (
-        <img src={image} alt="" width={1280} height={720} />
+        <img src={image} alt="" width={1280} height={720} loading="lazy" />
       ) : (
         <div class={"image"}></div>
       )}
