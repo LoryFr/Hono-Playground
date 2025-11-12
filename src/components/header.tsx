@@ -1,7 +1,7 @@
 import Badge from "./badge";
 import Avatar from "./avatar";
 import type { FC } from "hono/jsx";
-import { css, Style } from "hono/css";
+import { css } from "hono/css";
 
 const headerClass = css`
   display: flex;
@@ -39,7 +39,7 @@ const headerClass = css`
   }
 `;
 
-export default function Header() {
+const Header: FC = () => {
   return (
     <header class={headerClass}>
       <Avatar></Avatar>
@@ -70,4 +70,6 @@ export default function Header() {
       </div>
     </header>
   );
-}
+};
+
+export default Header;
