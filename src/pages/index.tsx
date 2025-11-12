@@ -5,7 +5,7 @@ import Projects from "../components/projects";
 import Colors from "../components/colors";
 
 const Page = (c: Context) => {
-  return c.render(
+  return c.html(
     <Layout
       title={"Lorenzo Fiori - Digital Product Designer"}
       description={

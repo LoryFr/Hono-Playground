@@ -15,7 +15,7 @@ function formatDate(raw: string) {
 const Page = async (c: Context) => {
   const { slug } = c.req.param();
   const color = await getColor(slug);
-  return c.render(
+  return c.html(
     <Layout
       title={color.docs[0].title}
       description={color.docs[0].description}

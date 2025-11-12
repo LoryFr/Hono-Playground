@@ -80,7 +80,7 @@ const cardClass = css`
   }
 `;
 
-const Card: FC = ({ image, href = "/", title, ...attrs }: Props) => {
+const Card: FC = ({ image, href = "/", title }: Props) => {
   return (
     <a href={href} class={cardClass} aria-label={title}>
       {image ? (

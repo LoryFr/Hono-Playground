@@ -16,7 +16,7 @@ function formatDate(raw: string) {
 const Page = async (c: Context) => {
   const { slug } = c.req.param();
   const project = await getProject(slug);
-  return c.render(
+  return c.html(
     <Layout
       title={project.docs[0].title}
       description={project.docs[0].description}

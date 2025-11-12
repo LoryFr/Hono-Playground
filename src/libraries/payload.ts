@@ -28,6 +28,7 @@ export const getProjects = async (): Promise<any> => {
       image: {
         url: true,
       },
+      title: true,
     },
   });
 };
@@ -42,6 +43,7 @@ export const getColors = async (): Promise<any> => {
       image: {
         url: true,
       },
+      title: true,
     },
   });
 };
